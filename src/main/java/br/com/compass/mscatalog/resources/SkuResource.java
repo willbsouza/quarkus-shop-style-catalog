@@ -83,4 +83,11 @@ public class SkuResource {
         skuRepository.deleteById(id);
         return Response.noContent().build();
     }
+
+    @GET
+    @Path("/order/{skuId}")
+    public Sku getSku(@PathParam("skuId") Long skuId){
+        return skuRepository.findById(skuId);
+    }
+
 }

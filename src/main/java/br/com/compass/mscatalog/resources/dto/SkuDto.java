@@ -5,7 +5,9 @@ import br.com.compass.mscatalog.domain.model.Sku;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
 
+import javax.persistence.FetchType;
 import java.util.List;
 
 @Getter
@@ -19,6 +21,7 @@ public class SkuDto {
     private String size;
     private Integer height;
     private Integer width;
+
     private List<Media> images;
 
     public SkuDto(Sku sku) {

@@ -48,6 +48,7 @@ public class Sku {
 
     @OneToMany(mappedBy = "sku", cascade = CascadeType.ALL)
     @NotNull @NotEmpty
+    @JsonIgnore
     private List<Media> images = new ArrayList<>();
 
     public Sku(SkuFormDto skuFormDto, Product product) {
